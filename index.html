@@ -1,152 +1,183 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Feliz cumpleaños</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Fuente manuscrita -->
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Playfair+Display&display=swap" rel="stylesheet">
+<title>Feliz Cumpleaños</title>
 
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: #0f0f14;
-      color: #e6e6eb;
-      font-family: 'Playfair Display', serif;
-      display: flex;
-      justify-content: center;
-      animation: fadeIn 2s ease;
-    }
+<!-- FUENTES -->
+<link href="https://fonts.googleapis.com/css2?family=Handlee&family=Playfair+Display&display=swap" rel="stylesheet">
 
-    .carta {
-      max-width: 650px;
-      padding: 50px 35px;
-      background: #16161d;
-      border-radius: 16px;
-      box-shadow: 0 30px 60px rgba(0,0,0,0.6);
-      line-height: 1.9;
-      animation: slideUp 2s ease;
-    }
+<style>
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #1c1c28, #0f0f14);
+  color: #f5f5f5;
+  font-family: 'Playfair Display', serif;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
 
-    h1 {
-      text-align: center;
-      font-family: 'Caveat', cursive;
-      font-size: 48px;
-      font-weight: 500;
-      margin-bottom: 30px;
-      color: #f5f5f7;
-    }
+/* CONTENEDOR */
+.container {
+  max-width: 700px;
+  width: 100%;
+  animation: fadeIn 2s ease;
+}
 
-    p {
-      margin-bottom: 22px;
-      font-size: 18px;
-    }
+/* TÍTULO */
+h1 {
+  text-align: center;
+  font-family: 'Handlee', cursive;
+  font-size: 3rem;
+  margin-bottom: 25px;
+  animation: float 6s ease-in-out infinite;
+}
 
-    .video, .imagenes {
-      margin: 30px 0;
-      text-align: center;
-    }
+/* VIDEO */
+.video {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(255,255,255,0.08);
+  margin-bottom: 40px;
+}
 
-    iframe {
-      width: 100%;
-      height: 320px;
-      border-radius: 14px;
-      border: none;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-    }
+.video iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
 
-    .imagenes img {
-      width: 100%;
-      border-radius: 14px;
-      margin-top: 20px;
-      filter: brightness(0.95) contrast(1.05);
-      transition: transform 6s ease, filter 6s ease;
-    }
+/* CARTA */
+.carta {
+  background: #faf7f2;
+  color: #3a3a3a;
+  border-radius: 30px;
+  padding: 45px;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  animation: softGlow 6s ease-in-out infinite;
+}
 
-    .imagenes img:hover {
-      transform: scale(1.04);
-      filter: brightness(1);
-    }
+/* DECORACIÓN */
+.carta::before {
+  content: "🌈";
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+}
 
-    .firma {
-      margin-top: 40px;
-      font-family: 'Caveat', cursive;
-      font-size: 26px;
-      text-align: right;
-      color: #d6d6db;
-    }
+/* TEXTO */
+.carta p {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: textFade 1.5s forwards;
+}
 
-    audio {
-      display: none;
-    }
+.carta p:nth-child(1){animation-delay:0.5s}
+.carta p:nth-child(2){animation-delay:1.2s}
+.carta p:nth-child(3){animation-delay:1.9s}
+.carta p:nth-child(4){animation-delay:2.6s}
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+/* FIRMA */
+.firma {
+  text-align: right;
+  font-family: 'Handlee', cursive;
+  font-size: 1.3rem;
+  margin-top: 30px;
+}
 
-    @keyframes slideUp {
-      from { transform: translateY(30px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-  </style>
+/* ANIMACIONES */
+@keyframes fadeIn {
+  from {opacity:0; transform:translateY(20px)}
+  to {opacity:1; transform:translateY(0)}
+}
+
+@keyframes float {
+  0%,100% {transform:translateY(0)}
+  50% {transform:translateY(-8px)}
+}
+
+@keyframes softGlow {
+  0%,100% {box-shadow: 0 20px 60px rgba(0,0,0,0.3)}
+  50% {box-shadow: 0 25px 80px rgba(0,0,0,0.4)}
+}
+
+@keyframes textFade {
+  to {opacity:1}
+}
+
+/* MÚSICA OCULTA */
+audio {
+  display: none;
+}
+</style>
 </head>
 
 <body>
 
-  <!-- Música suave automática -->
-  <audio autoplay loop>
-    <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_7fcb90c53d.mp3" type="audio/mpeg">
-  </audio>
+<div class="container">
 
-  <div class="carta">
-    <h1>Feliz cumpleaños</h1>
+<h1>Feliz cumpleaños</h1>
 
-    <!-- VIDEO -->
-    <div class="video">
-      <iframe 
-  src="https://www.youtube.com/embed/yBF0BdS-Fgs"
-  allow="autoplay; encrypted-media"
-  allowfullscreen>
-</iframe>
-    </div>
+<!-- VIDEO YOUTUBE -->
+<div class="video">
+  <iframe 
+    src="https://www.youtube.com/embed/yBF0BdS-Fgs?autoplay=1&mute=1&loop=1&playlist=yBF0BdS-Fgs"
+    allow="autoplay; encrypted-media"
+    allowfullscreen>
+  </iframe>
+</div>
 
-    <!-- TEXTO -->
-    <p>
-      Hoy no quiero decirte solo palabras bonitas, sino agradecerte de verdad.
-      Gracias por aparecer en mi vida cuando todo era nuevo y por quedarte de forma natural,
-      sin promesas ni discursos, simplemente estando.
-    </p>
+<!-- CARTA -->
+<div class="carta">
+  <p>
+    Hoy no quiero decirte solo palabras bonitas, sino agradecerte de verdad.
+    Gracias por aparecer en mi vida de la forma más natural posible,
+    sin anuncios ni promesas, simplemente estando.
+  </p>
 
-    <p>
-      Gracias por sacarme de la casa cuando yo feliz me quedaba encerrada,
-      por conocerme tan bien que a veces pareces saber más de mí que yo misma.
-      Gracias por escucharme, por resolver, por estar pendiente,
-      y por compartir conmigo el chisme como si fuera un ritual sagrado.
-    </p>
+  <p>
+    Gracias por sacarme de la casa cuando yo feliz me quedaba encerrada,
+    por conocerme tan bien que a veces parece que sabes más de mí que yo misma.
+    Gracias por escuchar, por resolver, por estar pendiente,
+    y por compartir conmigo el chisme como si fuera un ritual sagrado.
+  </p>
 
-    <p>
-      Gracias por tu presencia constante, por tu risa en los días pesados
-      y por acompañarme sin hacer ruido.
-      Hay personas que pasan por la vida y otras que se vuelven parte de ella;
-      tú eres de las segundas.
-    </p>
+  <p>
+    Gracias por tu risa en los días pesados,
+    por acompañar sin hacer ruido
+    y por quedarte en lo cotidiano,
+    que es donde viven las personas que realmente importan.
+  </p>
 
-    <p>
-      Feliz cumpleaños, y gracias por ser tú.
-    </p>
+  <p>
+    Hay personas que pasan por la vida
+    y otras que se vuelven parte de ella.
+    Tú eres de las segundas.
+  </p>
 
-    <!-- IMÁGENES -->
-    <div class="imagenes">
-      <img src="PEGA_AQUÍ_URL_DE_TU_FOTO_1">
-      <img src="PEGA_AQUÍ_URL_DE_TU_FOTO_2">
-    </div>
-
-    <div class="firma">
-      — Con cariño 🤍
-    </div>
+  <div class="firma">
+    Feliz cumpleaños, y gracias por ser tú 🤍
   </div>
+</div>
+
+</div>
+
+<!-- MÚSICA SUAVE -->
+<audio autoplay loop>
+  <source src="https://cdn.pixabay.com/audio/2023/03/09/audio_ebd2c1f2b1.mp3" type="audio/mpeg">
+</audio>
 
 </body>
 </html>
