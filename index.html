@@ -3,83 +3,146 @@
 <head>
   <meta charset="UTF-8">
   <title>Feliz cumpleaños</title>
+
+  <!-- Fuente manuscrita -->
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Playfair+Display&display=swap" rel="stylesheet">
+
   <style>
     body {
-      font-family: Georgia, serif;
-      background: #f7f4f2;
-      color: #3a3a3a;
+      margin: 0;
+      padding: 0;
+      background: #0f0f14;
+      color: #e6e6eb;
+      font-family: 'Playfair Display', serif;
       display: flex;
       justify-content: center;
-      padding: 40px;
+      animation: fadeIn 2s ease;
     }
+
     .carta {
       max-width: 650px;
-      background: white;
-      padding: 45px;
+      padding: 50px 35px;
+      background: #16161d;
+      border-radius: 16px;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.6);
       line-height: 1.9;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      animation: slideUp 2s ease;
     }
+
     h1 {
       text-align: center;
-      font-weight: normal;
-      margin-bottom: 40px;
+      font-family: 'Caveat', cursive;
+      font-size: 48px;
+      font-weight: 500;
+      margin-bottom: 30px;
+      color: #f5f5f7;
     }
+
+    p {
+      margin-bottom: 22px;
+      font-size: 18px;
+    }
+
+    .video, .imagenes {
+      margin: 30px 0;
+      text-align: center;
+    }
+
+    iframe {
+      width: 100%;
+      height: 320px;
+      border-radius: 14px;
+      border: none;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    }
+
+    .imagenes img {
+      width: 100%;
+      border-radius: 14px;
+      margin-top: 20px;
+      filter: brightness(0.95) contrast(1.05);
+      transition: transform 6s ease, filter 6s ease;
+    }
+
+    .imagenes img:hover {
+      transform: scale(1.04);
+      filter: brightness(1);
+    }
+
     .firma {
-      margin-top: 45px;
+      margin-top: 40px;
+      font-family: 'Caveat', cursive;
+      font-size: 26px;
+      text-align: right;
+      color: #d6d6db;
+    }
+
+    audio {
+      display: none;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
   </style>
 </head>
+
 <body>
+
+  <!-- Música suave automática -->
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_7fcb90c53d.mp3" type="audio/mpeg">
+  </audio>
+
   <div class="carta">
     <h1>Feliz cumpleaños</h1>
 
+    <!-- VIDEO -->
+    <div class="video">
+      <iframe src="PEGA_AQUÍ_TU_LINK_DE_DRIVE"></iframe>
+    </div>
+
+    <!-- TEXTO -->
     <p>
-      Hoy no quiero escribirte algo bonito solo porque es tu cumpleaños.
-      Quiero decirte algo que sí siento de verdad.
+      Hoy no quiero decirte solo palabras bonitas, sino agradecerte de verdad.
+      Gracias por aparecer en mi vida cuando todo era nuevo y por quedarte de forma natural,
+      sin promesas ni discursos, simplemente estando.
     </p>
 
     <p>
-      Gracias por aparecer en mi vida cuando todo era nuevo para mí.
-      Gracias por quedarte sin que yo tuviera que pedirlo, sin promesas, sin esfuerzo…
-      simplemente porque sí.
+      Gracias por sacarme de la casa cuando yo feliz me quedaba encerrada,
+      por conocerme tan bien que a veces pareces saber más de mí que yo misma.
+      Gracias por escucharme, por resolver, por estar pendiente,
+      y por compartir conmigo el chisme como si fuera un ritual sagrado.
     </p>
 
     <p>
-      Tú fuiste mi primera amiga de verdad.
-      No “amiga de clase”, no “amiga de ratos”,
-      amiga de las que saben TODO.
-      De las que ven lo bueno, lo malo y lo caótico y aun así se quedan.
+      Gracias por tu presencia constante, por tu risa en los días pesados
+      y por acompañarme sin hacer ruido.
+      Hay personas que pasan por la vida y otras que se vuelven parte de ella;
+      tú eres de las segundas.
     </p>
 
     <p>
-      Gracias por sacarme de mi casa cuando yo estaba perfectamente cómoda encerrada,
-      por conocerme tanto que a veces me asusta,
-      y por estar pendiente incluso cuando yo no sé cómo explicar lo que me pasa.
+      Feliz cumpleaños, y gracias por ser tú.
     </p>
 
-    <p>
-      Contigo puedo hablar de todo. Sin filtro. Sin miedo.
-      Desde lo más serio hasta el chisme más absurdo,
-      y eso para mí no es pequeño, es gigante.
-    </p>
-
-    <p>
-      A veces pienso que, si tuviera que elegir de nuevo la carrera,
-      la elegiría otra vez solo por volver a encontrarte.
-      Porque hay personas que hacen que todo valga la pena,
-      y tú eres una de ellas.
-    </p>
-
-    <p>
-      Feliz cumpleaños.
-      Gracias por estos cuatro años, por tu forma de ser
-      y por ser mi persona.
-    </p>
+    <!-- IMÁGENES -->
+    <div class="imagenes">
+      <img src="PEGA_AQUÍ_URL_DE_TU_FOTO_1">
+      <img src="PEGA_AQUÍ_URL_DE_TU_FOTO_2">
+    </div>
 
     <div class="firma">
-      — Siempre 🤍
+      — Con cariño 🤍
     </div>
   </div>
+
 </body>
 </html>
