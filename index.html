@@ -4,149 +4,150 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Feliz Cumpleaños 🎀</title>
+<title>Feliz Cumpleaños ✨</title>
 
-<!-- Fuentes bonitas -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<!-- Fuentes femeninas -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400&family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
 
 <style>
-  body {
-    margin: 0;
-    padding: 0;
-    background: #fff8f5;
-    font-family: 'Poppins', sans-serif;
-    color: #443f3f;
-    display: flex;
-    justify-content: center;
-    animation: pageFade 1.8s ease-in-out;
-  }
+/* 🌸 FONDO GENERAL */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #fdeff4, #f8f1ff);
+  color: #4a3b47;
+}
 
-  @keyframes pageFade {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
+/* CONTENEDOR */
+.container {
+  max-width: 760px;
+  margin: auto;
+  padding: 30px 20px 80px;
+}
 
-  /* CONTENEDOR */
-  .container {
-    max-width: 720px;
-    width: 100%;
-    padding: 25px;
-  }
+/* TÍTULO */
+h1 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #b65f8d;
+  margin-bottom: 30px;
+  animation: float 6s ease-in-out infinite;
+}
 
-  /* Encabezado */
-  h1 {
-    text-align: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    margin-top: 20px;
-    color: #b35c7a;
-    animation: floatText 6s ease-in-out infinite;
-  }
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
 
-  @keyframes floatText {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
-  }
+/* 🎥 VIDEOS */
+.video {
+  position: relative;
+  padding-bottom: 52%;
+  height: 0;
+  margin: 35px 0;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 14px 35px rgba(0,0,0,0.12);
+}
 
-  /* VIDEO GRANDE */
-  .video-main {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    border-radius: 18px;
-    margin: 28px 0;
-    box-shadow: 0 10px 28px rgba(0,0,0,0.12);
-    animation: videoFade 1.8s ease forwards;
-  }
+.video iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
 
-  .video-main iframe {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
+/* 📜 CARTA */
+.carta {
+  background: #fff7fb;
+  border-radius: 28px;
+  padding: 38px;
+  margin: 40px 0;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+  position: relative;
+}
 
-  @keyframes videoFade {
-    from { opacity: 0; transform: scale(0.98); }
-    to { opacity: 1; transform: scale(1); }
-  }
+.carta p {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
 
-  /* CARTA */
-  .card {
-    background: #fffdfb;
-    border-radius: 24px;
-    padding: 32px;
-    margin-bottom: 30px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-    animation: cardShow 2s ease forwards;
-  }
+/* FIRMA */
+.firma {
+  text-align: right;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.6rem;
+  color: #a55c85;
+}
 
-  @keyframes cardShow {
-    from { opacity: 0; transform: translateY(20px);}
-    to { opacity: 1; transform: translateY(0);}
-  }
+/* 🖼️ IMÁGENES */
+.galeria {
+  display: flex;
+  gap: 18px;
+  margin: 45px 0;
+}
 
-  .card p {
-    font-size: 1.15rem;
-    line-height: 1.8;
-    margin-bottom: 18px;
-  }
+.galeria img {
+  width: 50%;
+  border-radius: 22px;
+  transition: transform 0.8s ease;
+}
 
-  .signature {
-    text-align: right;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.3rem;
-    margin-top: 18px;
-    color: #7a5a7a;
-  }
+.galeria img:hover {
+  transform: scale(1.06);
+}
 
-  /* SEGUNDO VIDEO */
-  .video-second {
-    position: relative;
-    padding-bottom: 45%;
-    height: 0;
-    overflow: hidden;
-    border-radius: 16px;
-    margin: 36px 0;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-    animation: videoSmallFade 2s ease forwards;
-  }
+/* ✨ SCROLL ANIMATIONS */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1.2s ease;
+}
 
-  .video-second iframe {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-  @keyframes videoSmallFade {
-    from { opacity: 0; transform: translateY(18px);}
-    to { opacity: 1; transform: translateY(0);}
-  }
+/* 🎁 BOTÓN REGALO */
+.regalo-btn {
+  display: block;
+  margin: 60px auto;
+  padding: 16px 34px;
+  border-radius: 40px;
+  border: none;
+  background: linear-gradient(135deg, #f6a6c1, #d38adf);
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transition: transform 0.4s ease;
+}
 
-  /* IMÁGENES */
-  .image-group {
-    display: flex;
-    gap: 16px;
-    margin: 26px 0;
-    justify-content: center;
-  }
+.regalo-btn:hover {
+  transform: scale(1.05);
+}
 
-  .image-group img {
-    width: calc(50% - 8px);
-    border-radius: 18px;
-    object-fit: cover;
-    animation: imgShow 1.6s ease forwards;
-  }
+/* 🎀 CARTA SECRETA */
+.secreta {
+  display: none;
+  margin-top: 40px;
+  background: #fff;
+  padding: 35px;
+  border-radius: 26px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+  animation: fadeIn 1.4s ease forwards;
+}
 
-  @keyframes imgShow {
-    from { opacity: 0; transform: scale(0.97); }
-    to { opacity: 1; transform: scale(1); }
-  }
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
 
-  /* MÚSICA */
-  audio { display: none; }
+/* 🎶 MÚSICA */
+audio { display: none; }
 
 </style>
 </head>
@@ -155,69 +156,94 @@
 
 <div class="container">
 
-  <!-- Título -->
-  <h1>Feliz cumpleaños 🎀</h1>
+<h1>Feliz cumpleaños ✨</h1>
 
-  <!-- VIDEO PRINCIPAL -->
-  <div class="video-main">
-    <iframe 
-      src="https://www.youtube.com/embed/yBF0BdS-Fgs?autoplay=1&mute=1&loop=1&playlist=yBF0BdS-Fgs"
-      allow="autoplay; encrypted-media"
-      allowfullscreen>
-    </iframe>
-  </div>
+<!-- VIDEO 1 -->
+<div class="video reveal">
+  <iframe src="https://www.youtube.com/embed/yBF0BdS-Fgs?mute=1" allowfullscreen></iframe>
+</div>
 
-  <!-- TEXTO DE LA CARTA -->
-  <div class="card">
-    <p>
-      Hoy quiero agradecerte de verdad. Gracias por aparecer en mi vida como un regalo
-      natural, sin anuncios ni discursos, solo con tu presencia.
-    </p>
+<!-- CARTA PRINCIPAL -->
+<div class="carta reveal">
+  <p>
+    Hoy no quiero decirte solo palabras bonitas.  
+    Hoy quiero agradecerte con calma, como se agradece lo que de verdad importa.
+  </p>
 
-    <p>
-      Gracias por sacarme de la casa cuando yo feliz me quedaba encerrada,
-      por conocerme tan bien que a veces parecías saber más de mí que yo misma.
-      Gracias por escucharme, por entender mis silencios, y por compartir conmigo
-      el chisme como si fuera un ritual sagrado.
-    </p>
-  </div>
+  <p>
+    Gracias por ser esa persona que me saca de la casa cuando yo no quiero,
+    la que me conoce incluso cuando yo no sé explicarme,
+    la que escucha, resuelve y se queda.
+  </p>
 
-  <!-- SEGUNDO VIDEO -->
-  <div class="video-second">
-    <iframe 
-      src="https://www.youtube.com/embed/AQUI_PONES_EL_OTRO_LINK?mute=1"
-      allow="autoplay; encrypted-media"
-      allowfullscreen>
-    </iframe>
-  </div>
+  <p>
+    Gracias por las risas, por los silencios cómodos,
+    y por compartir conmigo hasta el chisme como si fuera un ritual sagrado.
+  </p>
 
-  <!-- MÁS TEXTO DE LA CARTA -->
-  <div class="card">
-    <p>
-      Gracias por tu risa en los días pesados, por acompañarme sin hacer ruido,
-      y por ser esa persona con la que lo cotidiano se vuelve especial.
-    </p>
+  <p>
+    Hay personas que pasan… y otras que se vuelven hogar.
+    Tú eres de esas.
+  </p>
 
-    <p>
-      Hay personas que pasan por la vida y otras que se vuelven parte de ella;
-      tú eres de las segundas. Feliz cumpleaños y gracias por ser tú.
-    </p>
+  <div class="firma">— Con cariño 🤍</div>
+</div>
 
-    <div class="signature">— Con cariño 🤍</div>
-  </div>
+<!-- VIDEO 2 -->
+<div class="video reveal">
+  <iframe src="https://www.youtube.com/embed/AQUI_TU_SEGUNDO_VIDEO?mute=1" allowfullscreen></iframe>
+</div>
 
-  <!-- GRUPO DE IMÁGENES -->
-  <div class="image-group">
-    <img src="PEGA_AQUÍ_URL_DE_TU_IMAGEN_1" alt="Imagen 1">
-    <img src="PEGA_AQUÍ_URL_DE_TU_IMAGEN_2" alt="Imagen 2">
-  </div>
+<!-- IMÁGENES -->
+<div class="galeria reveal">
+  <img src="URL_IMAGEN_1">
+  <img src="URL_IMAGEN_2">
+</div>
+
+<!-- BOTÓN REGALO -->
+<button class="regalo-btn" onclick="mostrarRegalo()">🎁 Abrir regalo sorpresita</button>
+
+<!-- CARTA SECRETA -->
+<div class="secreta" id="regalo">
+  <p>
+    Si llegaste hasta aquí, es porque mereces saberlo:
+    tu forma de estar en mi vida la hace más ligera,
+    más bonita y más real.
+  </p>
+
+  <p>
+    Feliz cumpleaños.  
+    Que la vida te devuelva multiplicado todo lo que das sin darte cuenta.
+  </p>
+
+  <div class="firma">🤍</div>
+</div>
 
 </div>
 
-<!-- MÚSICA SUAVE AUTOMÁTICA -->
+<!-- 🎶 MÚSICA SUAVE -->
 <audio autoplay loop>
-  <source src="https://cdn.pixabay.com/audio/2023/03/09/audio_ebd2c1f2b1.mp3" type="audio/mpeg">
+  <source src="https://cdn.pixabay.com/audio/2023/03/09/audio_ebd2c1f2b1.mp3">
 </audio>
+
+<script>
+/* SCROLL REVEAL */
+const reveals = document.querySelectorAll('.reveal');
+
+window.addEventListener('scroll', () => {
+  reveals.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      el.classList.add('active');
+    }
+  });
+});
+
+/* REGALO */
+function mostrarRegalo() {
+  document.getElementById('regalo').style.display = 'block';
+}
+</script>
 
 </body>
 </html>
